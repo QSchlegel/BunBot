@@ -1,0 +1,41 @@
+{
+  "name": "bunbot",
+  "version": "0.1.0",
+  "description": "A lightweight bot runtime built on Bun for fast deployment everywhere",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist --target bun && bun run build:types",
+    "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
+    "prepublishOnly": "bun run build",
+    "test": "bun test",
+    "dev": "bun --watch src/index.ts"
+  },
+  "keywords": [
+    "bot",
+    "runtime",
+    "bun",
+    "lightweight",
+    "framework"
+  ],
+  "license": "MIT",
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.5.0"
+  }
+}
