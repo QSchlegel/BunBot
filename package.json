@@ -1,5 +1,5 @@
 {
-  "name": "bunbot",
+  "name": "@bunbot/runtime",
   "version": "0.1.0",
   "description": "A lightweight bot runtime built on Bun for fast deployment everywhere",
   "type": "module",
@@ -31,6 +31,14 @@
     "framework"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quirinschlegel/BunBot.git"
+  },
+  "homepage": "https://www.npmjs.com/package/@bunbot/runtime",
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "bun": ">=1.0.0"
   },
